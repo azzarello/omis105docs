@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>windows_install</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="installation-guide-for-virtualbox-and-windows-10-on-macos-machines">Installation guide for Virtualbox and Windows 10 on MacOS machines</h1>
+<h2 id="system-requirements">System Requirements</h2>
+<ul>
+<li>MacOS (Do not attempt anything in this document unless you are using a Mac computer)</li>
+<li>4 GB RAM</li>
+<li>20+ GB of free space on your hard drive</li>
+</ul>
+<p>In order to install all software requirements for the course with ~2 GB for course files, you need approximately 20 GB of disk space available. To achieve this <em>minimal install</em> you need to delete all files that end in <code>.iso</code> or <code>.exe</code> after they have been installed successfully.</p>
+<h2 id="step-1-download-pre-requisite-software-packages">Step 1: Download pre-requisite software packages</h2>
+<ul>
+<li>Navigate to the course page for OMIS 105 on Camino</li>
+<li>Download all 4 files that are provided by a Google Drive link
+<ul>
+<li>Note: Only the Windows 10 <code>en_windows(...).iso</code> is required for this installation document.</li>
+</ul></li>
+<li>Navigate to the website for <a href="https://www.virtualbox.org/">VirtualBox</a></li>
+<li>Click the large <em>Download VirtualBox 6.x</em> button <img src="screenshots/download_virtual_box.png" alt="Download VirtualBox 6.1" /></li>
+<li>On the following page, click the link labeled <em>OS X hosts</em> and save the <code>.dmg</code> file where you can find it again.</li>
+<li>Alternatively, you can just follow <a href="https://download.virtualbox.org/virtualbox/6.1.22/VirtualBox-6.1.22-144080-OSX.dmg">this link</a> directly. Although, it may be broken or not point to the newest version of VirtualBox when you read this.</li>
+</ul>
+<h2 id="step-2-installing-virtualbox">Step 2: Installing VirtualBox</h2>
+<ul>
+<li>Find the <code>.dmg</code> file you just downloaded (likely in <code>Downloads</code> by default with most browsers)</li>
+<li>Double-click this file which will open a window that looks like this:</li>
+</ul>
+<figure>
+<img src="screenshots/splash_screen.png" alt="VirtualBox install splash screen" /><figcaption aria-hidden="true">VirtualBox install splash screen</figcaption>
+</figure>
+<ul>
+<li>Double-click the icon shown under <em>1.</em> that is labeled <code>VirtualBox.pkg</code></li>
+<li>Click <em>Install for all users on this computer</em></li>
+</ul>
+<figure>
+<img src="screenshots/install_for_all_users.png" alt="Install for all users on this computer" /><figcaption aria-hidden="true">Install for all users on this computer</figcaption>
+</figure>
+<ul>
+<li>Click install on the next screen to confirm you would like to install VirtualBox</li>
+</ul>
+<figure>
+<img src="screenshots/install_confirmation.png" alt="Install" /><figcaption aria-hidden="true">Install</figcaption>
+</figure>
+<ul>
+<li>Wait for the install to finish, this could take a few minutes to complete.
+<ul>
+<li><strong>IF YOUR INSTALL FAILS</strong> Please see the <em>Common Problems</em> section at the bottom of this document.</li>
+</ul></li>
+</ul>
+<h2 id="step-3-creating-a-virtual-machine-vm">Step 3: Creating a Virtual Machine (VM)</h2>
+<ul>
+<li>Navigate to your <code>Applications</code> folder and double-click the VirtualBox application icon.
+<ul>
+<li>This should open a window labeled <em>Oracle VM VirtualBox Manager</em></li>
+</ul></li>
+<li>Click the blue “circle-star” labeled <em>New</em> in the top-left corner of the application to create a new virtual machine</li>
+</ul>
+<figure>
+<img src="screenshots/welcome.png" alt="Welcome" /><figcaption aria-hidden="true">Welcome</figcaption>
+</figure>
+<ul>
+<li>Name your virtual machine
+<ul>
+<li>This can be anything, but if you type <em>Windows 10</em>, the application will automatically populate the type and version fields correctly.</li>
+</ul></li>
+<li>Specify <em>Microsoft Windows</em> for the type and <em>Windows 10 (64-bit)</em> for the version.</li>
+</ul>
+<figure>
+<img src="screenshots/name_and_os.png" alt="Name &amp; OS" /><figcaption aria-hidden="true">Name &amp; OS</figcaption>
+</figure>
+<ul>
+<li>On the following screen, select the amount of system memory you would like to allocate.
+<ul>
+<li>This will take memory away from your normal OSX system and give it to the Windows 10 VM, so the more memory (RAM) you allocate, the better the performance of your VM will be.</li>
+<li>Start with a quarter of your available RAM and move this value up as you see fit.</li>
+<li>Picking a value that is too high can lead to system instability or crashes, stay out of the region that is red in this window at all times.</li>
+</ul></li>
+</ul>
+<figure>
+<img src="screenshots/ram.png" alt="RAM" /><figcaption aria-hidden="true">RAM</figcaption>
+</figure>
+<ul>
+<li>Once you have selected a value, click <em>Continue</em></li>
+<li>On the next screen, ensure that <em>Create a virtual hard disk now</em> is selected and click create</li>
+</ul>
+<figure>
+<img src="screenshots/virtual_hard_disk.png" alt="Virtual Hard Disk" /><figcaption aria-hidden="true">Virtual Hard Disk</figcaption>
+</figure>
+<ul>
+<li>On the following screen, select <em>VDI (VirtualBox Disk Image)</em> and click <em>Continue</em></li>
+</ul>
+<figure>
+<img src="screenshots/vdi.png" alt="VDI" /><figcaption aria-hidden="true">VDI</figcaption>
+</figure>
+<ul>
+<li>On the following screen, select <em>Dynamically allocated</em> and click <em>Continue</em>
+<ul>
+<li>This makes it such that your virtual hard drive will only occupy as much room as it needs on your system, rather that constantly occupying the size you select on the next screen</li>
+</ul></li>
+</ul>
+<figure>
+<img src="screenshots/dynamically_allocated.png" alt="Dynamically Allocated" /><figcaption aria-hidden="true">Dynamically Allocated</figcaption>
+</figure>
+<ul>
+<li>Next, select an upper limit for the size of this disk. 30 GB should be safe, but there’s no harm in going higher if you aren’t going to occupy that much space.</li>
+</ul>
+<figure>
+<img src="screenshots/hard_drive_size.png" alt="Hard Drive Size" /><figcaption aria-hidden="true">Hard Drive Size</figcaption>
+</figure>
+<ul>
+<li><p>Now it’s time to start your new virtual machine.</p></li>
+<li><p>To start the VM, simply click the “Start” button.</p></li>
+<li><p>This <em>should</em> generate a prompt for you to provide the <code>.iso</code> file you downloaded earlier.</p>
+<ul>
+<li>The operating system can’t be installed without providing it with media to install from.
+<ul>
+<li>In the past, this involved inserting the Windows install CD into your computer. Therefore we need to provide the <code>.iso</code> file as a <em>virtual CD</em>.</li>
+</ul></li>
+</ul></li>
+</ul>
+<figure>
+<img src="screenshots/insert_iso_prompt.png" alt="ISO Prompt" /><figcaption aria-hidden="true">ISO Prompt</figcaption>
+</figure>
+<ul>
+<li>For some students, this prompt would not show up and then generate an error message when starting the VM.</li>
+<li>If this is the case, you must go click the “Settings” button.</li>
+<li>Navigate to the “Storage” tab.</li>
+<li>Then there should be a blue disk icon with the word “Empty” next to it, click this icon.</li>
+<li>Then on the right side of the window, under the “Attributes” heading, there is another <em>blue disk icon</em>. Click this and select “Choose a disk file” and select the <code>.iso</code> that is <em>likely</em> in your Downloads folder.</li>
+<li>After this, the VM should start normally and you will be able to follow the steps below.
+<ul>
+<li>If you encounter an error at this point or anywhere else, check the <strong>Common Issues</strong> section below.</li>
+</ul></li>
+</ul>
+<figure>
+<img src="screenshots/insert_disk.png" alt="Manually Select ISO" /><figcaption aria-hidden="true">Manually Select ISO</figcaption>
+</figure>
+<ul>
+<li>Click “Next” with all the default values</li>
+<li>Click “Install now”</li>
+<li>When asked to enter your product key, press skip. This will be entered later in the process.</li>
+<li>Click “I agree” check-box and click “Next”.</li>
+<li>Select “Custom: Install Windows only (advanced)”
+<ul>
+<li>This may not appear for everyone.</li>
+</ul></li>
+<li>Click “Next” while ensuring that the <em>X</em> GB hard drive you defined earlier is selected.
+<ul>
+<li>It should be, but it is important to check.</li>
+</ul></li>
+<li>Select “Do this later” when prompted for your product key.
+<ul>
+<li>Once again, this will be done later in the process.</li>
+</ul></li>
+<li>Click “Customize settings” and turn all sliders to “Off” except for the one that begins “Use SmartScreen online services…” so the pages look like the following images.</li>
+<li>Select “Join a local Active Directory domain.”</li>
+<li>Select a username and password for your VM, make sure you can remember this or write it down.</li>
+<li>If prompted on boot with this message, select “No.”</li>
+<li>Now shut the VM down, either by clicking the <em>X</em> in the corner of the window or through the Windows menu in the bottom left corner of the screen.
+<ul>
+<li>If the former, ensure that you select “shut down” when prompted.</li>
+</ul></li>
+</ul>
+<h2 id="alter-virtual-machine-boot-order">Alter Virtual Machine Boot Order</h2>
+<ul>
+<li>Click “Settings”</li>
+<li>Navigate to the “System” tab</li>
+<li>Deselect all options except for “Hard Disk” from the boot order menu</li>
+<li>Click OK</li>
+<li>Start VM again by clicking the “Start” button Now that the Operating System has been fully installed, there is no longer a need for this <em>virtual CD</em> you <em>inserted</em> before.</li>
+</ul>
+<h2 id="activating-windows">Activating Windows</h2>
+<ul>
+<li>Start your VM</li>
+<li>Click the Windows start menu in the bottom left corner of the screen</li>
+<li>Click the “Settings” gear icon</li>
+<li>Select “Update and Security”</li>
+<li>Select “Activation”</li>
+<li>Click “Change product key” and enter the product key provided by your professor</li>
+</ul>
+<h2 id="updating-windows">Updating Windows</h2>
+<p>In order to install some software required later in the quarter, your Windows version must be greater than 1607 to install it. This does not need to be done in the order of this document, but it must be done before installing SSMS. - Follow the instructions of the previous section until you get to “Update and Security”. - Then on this tab, you should see a button that says “Check for Updates,” and let Windows install all necessary updates. -</p>
+<figure>
+<img src="screenshots/windows_update.png" alt="Windows Update" /><figcaption aria-hidden="true">Windows Update</figcaption>
+</figure>
+<h2 id="create-shared-folder-optional">Create Shared Folder (Optional)</h2>
+<p>As the name implies, setting up a shared folder allows you to share files directly between the Windows VM and your normal MacOS system. If you choose not to do this, you would need to download any new software from inside the VM in a browser and use Google Drive, email, etc. to transfer files out of the VM. - Create a folder <em>somewhere</em> in MacOS to use as your shared folder. - A folder within Downloads is probably a good spot. -</p>
+</body>
+</html>
